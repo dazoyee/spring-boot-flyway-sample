@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/flyway_sample
+    username: flyway
+    password: flyway
+
+  flyway:
+    enabled: true
+    url: jdbc:mariadb://localhost:3306/flyway_sample
+    schemas: flyway_sample
+    user: flyway
+    password: flyway
+    baseline-on-migrate: false  # Flywayのマイグレーションスクリプトの実行バージョンを途中から始めるか否か
+    # baseline-version: 1.0.0  # baseline-on-migrate が true の場合に開始するバージョン
+    # baseline-description: Initial  # baseline-version で実施された場合に記録されるコメント
+    locations: classpath:db/migration

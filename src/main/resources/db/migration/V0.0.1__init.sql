@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS `person`
+(
+    `id`   BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `name` VARCHAR(100)    NOT NULL COMMENT '名前',
+    PRIMARY KEY (`id`)
+)
+;
